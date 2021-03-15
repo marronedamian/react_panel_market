@@ -1,0 +1,35 @@
+{
+  "name": "@dact/admin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "PORT=4000 react-app-rewired start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postinstall": "rm -rf ./node_modules/@dact/core/node_modules/{react,react-dom}"
+  },
+  "dependencies": {
+    "@dact/core": "file:../core",
+    "@material-ui/core": "^4.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.1.6"
+  }
+}

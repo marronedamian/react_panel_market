@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "plugins": ["jest", "prettier"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    // Always the last to prevent (even more) rule conflicts with prettier
+    "prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "react/jsx-props-no-spreading": "off",
+    "function-paren-newline": "off",
+    "react/jsx-curly-newline": "off",
+    "no-confusing-arrow": "off",
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off",
+    "react/prop-types": "off",
+    "import/no-unresolved": [2, { "ignore": ["@material-ui/core", "react-router-dom", "react"] }],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all",
+        "semi": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "dact",
+  "scripts": {
+    "prettier": "prettier --trailing-comma all --no-semi --write .",
+    "start": "npm-run-all --parallel dev:core dev:admin dev:market",
+    "start:admin": "npm-run-all --parallel dev:core dev:admin",
+    "start:market": "npm-run-all --parallel dev:core dev:market",
+    "dev:admin": "npm start --prefix ./admin",
+    "dev:core": "npm start --prefix ./core",
+    "dev:market": "npm start --prefix ./market",
+    "build": "npm-run-all build:core build:admin build:market",
+    "build:admin": "npm run build --prefix ./admin",
+    "build:core": "npm run build --prefix ./core",
+    "build:market": "npm run build --prefix ./market"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.1"
+  }
+}
